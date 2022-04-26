@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block body_block %}
+  <div class="jumbotron">
+    <h1>Delete {{pagetype.name}}?</h1>
+
+    <form method="post">
+      {% csrf_token %}
+      <input type="submit" class="btn btn-danger" value="Delete">
+      <a href="{% url 'webpages:pagetype_list' %} ">Cancel</a>
+    
+    </form>
+
+{% endblock %}
+

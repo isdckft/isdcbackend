@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+    {% block title_block %}
+        Web Pages
+    {% endblock %}
+  {% block body_block %}
+    {% load my_extras %}
+    <h1>Here are the web pages:</h1>
+    <h2>{{ text|cutout:"cool" }}</h2>
+
+    {% if webpages %}
+        <table>
+            <thead>
+            <th>Id</th>
+            <th>Name</th>
+            <th>About</th>
+            <th>Url</th>
+            <th>Page Type</th>
+            <th>Date</th>
+            <th>Official</th>
+            <th>Delete</th>
+            <th>Update</th>
+            </thead>
+
+            {% for webpage in webpages %}
+            <tr>
+                <td>{{webpage.id}}</td>
+                <td><a href="{% url 'webpages:webpage_detail' pk=webpage.id  %}">{{webpage.name}}</a></td>
+                <td>{{webpage.about}}</td>
+                <td>{{webpage.url}}</td>
+                <td>{{webpage.pagetype}}</td>
+                <td>{{webpage.date}}</td>
+                <td>{{webpage.official}}</td>
+                <td><a href="{% url 'webpages:webpage_delete' pk=webpage.id %} ">Delete</a></td>
+                <td><a href="{% url 'webpages:webpage_update' pk=webpage.id %} ">Update</a></td>
+            </tr>
+            {% endfor %}
+        </table> 
+
+    {% else %}
+        <p>No Web Pages Records. Table is empty.</p>
+
+    {% endif %}
+{% endblock %}
+ 

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+{% load static %} 
+  {% block body_block %}
+
+    <h1>{{title | title}}</h1>
+    <h2>{{text | upper}}</h2>
+       
+    See more here: <a href="http://www.isdcproject.com" target="_blank" rel="noopener noreferrer">http://www.isdcproject.com</a> <br>
+
+    <div class="container">
+        <div class="jumbotron">
+          {% if user.is_authenticated %}
+              <h2>Welcome {{ user.username }}!</h2>
+          {% else %}
+              <h2>Welcome to the Django site! It is very experimental.</h2>
+          {% endif %}
+          <img src="{% static 'images/python.jpg' %}" alt="image missing!">
+        </div>
+
+    </div>
+
+  {% endblock %}
+
+

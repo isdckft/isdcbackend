@@ -1,0 +1,35 @@
+<!DOCTYPE html>{% extends 'base.html' %}{% block body_block %}
+<h1>Iris ML Example</h1>
+<pre>
+Prediction: ['Iris-virginica' 'Iris-versicolor' 'Iris-virginica' 'Iris-versicolor'
+ 'Iris-virginica' 'Iris-virginica' 'Iris-versicolor' 'Iris-versicolor'
+ 'Iris-setosa' 'Iris-virginica' 'Iris-setosa' 'Iris-setosa'
+ 'Iris-virginica' 'Iris-virginica' 'Iris-setosa' 'Iris-virginica'
+ 'Iris-versicolor' 'Iris-setosa' 'Iris-setosa' 'Iris-setosa'
+ 'Iris-versicolor' 'Iris-setosa' 'Iris-versicolor' 'Iris-virginica'
+ 'Iris-versicolor' 'Iris-versicolor' 'Iris-versicolor' 'Iris-versicolor'
+ 'Iris-versicolor' 'Iris-setosa' 'Iris-virginica' 'Iris-virginica'
+ 'Iris-versicolor' 'Iris-setosa' 'Iris-virginica' 'Iris-setosa'
+ 'Iris-setosa' 'Iris-setosa' 'Iris-setosa' 'Iris-versicolor'
+ 'Iris-versicolor' 'Iris-setosa' 'Iris-versicolor' 'Iris-virginica'
+ 'Iris-versicolor']
+Iris accuracy
+0.9555555555555556
+Classification matrix (TP, TN, FP, FN)
+[[15  0  0]
+ [ 0 15  0]
+ [ 0  2 13]]
+Classification report
+Precision=TP/(TP+FP), Recall=TP/(TP+FN), F1sore/2*precision*recall/(precisuon+recall)
+                 precision    recall  f1-score   support
+
+    Iris-setosa       1.00      1.00      1.00        15
+Iris-versicolor       0.88      1.00      0.94        15
+ Iris-virginica       1.00      0.87      0.93        15
+
+      micro avg       0.96      0.96      0.96        45
+      macro avg       0.96      0.96      0.96        45
+   weighted avg       0.96      0.96      0.96        45
+
+</pre>
+{% endblock %}

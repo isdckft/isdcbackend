@@ -1,0 +1,21 @@
+html,
+body {
+  height: 100%;
+  width: 100%;
+  background: black;;
+  color: white;
+  margin: 0;
+}
+
+pre {
+  color: white;
+}
+
+
+.jumbotron{
+  color: black!important;
+} 
+
+h1 {
+color: red;
+}

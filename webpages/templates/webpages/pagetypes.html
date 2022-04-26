@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+    {% block title_block %}
+        Page Types
+    {% endblock %}
+  {% block body_block %}
+
+    <h1>Here are the Page types</h1>
+
+    {% if pagetypes %}
+        <table>
+            <thead>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Delete</th>
+            </thead>
+
+            {% for pagetype in pagetypes %}
+            <tr>
+                <td>{{pagetype.id}}</td>
+                <td><a href="{% url 'webpages:pagetype_update' pk=pagetype.id  %}">{{pagetype.name}}</a></td>
+                <td><a href="{% url 'webpages:pagetype_delete' pk=pagetype.id %} ">Delete</a></td>
+            </tr>
+            {% endfor %}
+        </table> 
+
+    {% else %}
+        <p>No Page types Records. Table is empty.</p>
+
+    {% endif %}
+{% endblock %}
+ 

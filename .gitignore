@@ -1,0 +1,6 @@
+*.pyc
+__pycache__
+/__pycache__
+local_settings.py
+.spyproject
+db.sqlite3

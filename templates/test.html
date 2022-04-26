@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+{% block body_block  %}
+
+<div class="container">
+  <h1>You are now logged into the site!</h1>
+  <h2><a href="{% url 'webpages:webpage_list'%}">Go to Web pages</a></h2>
+
+</div>
+
+{% endblock %}
