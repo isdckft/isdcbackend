@@ -27,9 +27,9 @@ If you want to learn more about creating good readme files then refer the follow
 - [Chakra Core](https://github.com/Microsoft/ChakraCore)
 
 See here : http://django.isdckft.com 
-docker build -t isdcbackend . 
-docker run -p 8000:8000 isdcbackend
-docker run -i -t isdcbackend sh
+docker build -t isdckft/isdcbackend . 
+#docker run -p 8000:8000 isdckft/isdcbackend
+docker run -i -t isdckft/isdcbackend sh
 
 # Django felépítés
 python3 manage.py makemigrations isdcbackend

@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from rest_framework_jwt.views import obtain_jwt_token
+#from rest_framework_jwt.views import obtain_jwt_token
 from django.conf import settings
 from . import views
 
@@ -26,7 +26,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('rest/', include('webpages.urls-rest')), # rest api
     path('', include('webpages.urls')), # Sites here in django
-    path('api-token-auth/', obtain_jwt_token),
+    # path('api-token-auth/', obtain_jwt_token),
     path('ml/', include('ml.urls')),
     path('accounts/', include("accounts.urls", namespace="accounts")),
     path('accounts/', include("django.contrib.auth.urls")),

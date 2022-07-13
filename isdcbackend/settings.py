@@ -23,6 +23,9 @@ ALLOWED_HOSTS =['localhost', 'www.isdckft.com', 'isdckft.com', '127.0.0.1']
 CORS_ORIGIN_ALLOW_ALL=True
 CORS_ORIGIN_WHITELIST = (
     'www.isdckft.com:4250',
+    'localhost:4250',
+    'isdckft.com:4250',
+    '127.0.0.1:4250',
 )
 
 MIDDLEWARE_CLASSES = (

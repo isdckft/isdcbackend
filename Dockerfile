@@ -1,7 +1,9 @@
 FROM ubuntu:20.04
 RUN apt-get update && apt-get install -y tzdata && apt install -y python3.8 python3-pip
 RUN apt install python3-dev libpq-dev nginx -y
-RUN pip install django gunicorn psycopg2
+RUN pip install django
+RUN pip install gunicorn
+RUN pip install psycopg2
 RUN pip install djangorestframework 
 RUN pip install djangorestframework-simplejwt 
 RUN pip install markdown 
