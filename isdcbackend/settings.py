@@ -22,10 +22,7 @@ DEBUG = False
 ALLOWED_HOSTS =['localhost', 'www.isdckft.com', 'isdckft.com', '127.0.0.1']
 CORS_ORIGIN_ALLOW_ALL=True
 CORS_ORIGIN_WHITELIST = (
-    'www.isdckft.com:4250',
-    'localhost:4250',
-    'isdckft.com:4250',
-    '127.0.0.1:4250',
+    'http://www.isdckft.com:4250',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -89,23 +86,23 @@ WSGI_APPLICATION = 'isdcbackend.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'isdcbackend',
-        'USER': 'django',
-        'PASSWORD': 'dN1ce2019',
-        'HOST': 'localhost',
-        'PORT': '5432',
-    }
-}
-
 # DATABASES = {
 #     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#         'NAME': 'isdcbackend',
+#         'USER': 'django',
+#         'PASSWORD': 'dN1ce2019',
+#         'HOST': 'localhost',
+#         'PORT': '5432',
 #     }
 # }
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    }
+}
 
 
 

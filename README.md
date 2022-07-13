@@ -32,8 +32,7 @@ docker build -t isdckft/isdcbackend .
 docker run -i -t isdckft/isdcbackend sh
 
 # Django felépítés
-python3 manage.py makemigrations isdcbackend
-python3 manage.py makemigrations accounts
-python3 manage.py makemigrations webpages
+python3 manage.py makemigrations
+
 # DB migrálás
-python manage.py migrate 
+python3 manage.py migrate 

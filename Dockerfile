@@ -22,7 +22,8 @@ RUN pip install whitenoise
 
 ADD . /app
 WORKDIR /app
-#RUN python manage.py migrate
+RUN python3 manage.py makemigrations
+RUN python3 manage.py migrate 
 
 EXPOSE 8000
 CMD ["gunicorn", "--bind", ":8000", "--workers", "3", "isdcbackend.wsgi"]
