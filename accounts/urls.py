@@ -10,4 +10,3 @@ urlpatterns = [
     path('logout/', auth_views.LogoutView.as_view(), name="logout"),
     # path('register/', views.SignUp.as_view(),name='register'),
 ]
- 

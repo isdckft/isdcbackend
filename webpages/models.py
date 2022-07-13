@@ -23,7 +23,6 @@ class WebPage(models.Model):
     official = models.BooleanField()
     date = models.DateField()
 
-    
     def __str__(self):
         return self.name
     

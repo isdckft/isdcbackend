@@ -12,4 +12,3 @@ urlpatterns = [
     path('webpage-post/', views.webpage_post),
     path('webpage-put/<int:pk>/', views.webpage_put),
 ]
-

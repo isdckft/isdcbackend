@@ -16,4 +16,3 @@ urlpatterns = [
     path('pagetype/<int:pk>/', views.PageTypeUpdateView.as_view(),name='pagetype_update'),
     path('pagetype-delete/<int:pk>/', views.PageTypeDeleteView.as_view(),name='pagetype_delete'),
 ]
-

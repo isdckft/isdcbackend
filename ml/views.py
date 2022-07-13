@@ -16,8 +16,6 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.preprocessing import LabelEncoder, OneHotEncoder
 from sklearn.impute import SimpleImputer
 
-
-
 # Get the parameters
 @csrf_exempt
 @api_view(['GET'])

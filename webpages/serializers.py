@@ -10,4 +10,3 @@ class WebPageSerializer(serializers.ModelSerializer):
     class Meta:
         model = WebPage
         fields = ('id','pagetype','name','about','url','official','date')
-

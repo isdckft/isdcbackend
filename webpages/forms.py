@@ -25,5 +25,3 @@ class WebPageForm(forms.ModelForm):
         widgets = {
              'about': forms.Textarea,
         }
-
-

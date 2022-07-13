@@ -1,5 +1,12 @@
 # Introduction 
-TODO: Give a short introduction of your project. Let this section explain the objectives or the motivation behind this project. 
+Az isdc demo site backendje. Az alábbi db-ket támogatja:
+Django officially supports the following databases:
+
+PostgreSQL
+MariaDB
+MySQL
+Oracle
+SQLite
 
 # Getting Started
 TODO: Guide users through getting your code up and running on their own system. In this section you can talk about:
@@ -19,4 +26,14 @@ If you want to learn more about creating good readme files then refer the follow
 - [Visual Studio Code](https://github.com/Microsoft/vscode)
 - [Chakra Core](https://github.com/Microsoft/ChakraCore)
 
-See here : http://django.isdckft.com
+See here : http://django.isdckft.com 
+docker build -t isdcbackend . 
+docker run -p 8000:8000 isdcbackend
+docker run -i -t isdcbackend sh
+
+# Django felépítés
+python3 manage.py makemigrations isdcbackend
+python3 manage.py makemigrations accounts
+python3 manage.py makemigrations webpages
+# DB migrálás
+python manage.py migrate 

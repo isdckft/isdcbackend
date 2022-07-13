@@ -18,7 +18,6 @@ from django.urls import reverse_lazy,reverse
 from django.contrib.auth.mixins import LoginRequiredMixin
 
 
-
 @csrf_exempt
 @api_view(['GET'])
 @permission_classes([permissions.AllowAny,]) # everybody cab access it
